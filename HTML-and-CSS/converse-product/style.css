@@ -13,6 +13,23 @@ body {
   border: 4px solid black;
   width: 825px;
   margin: 50px auto;
+  position: relative;
+}
+
+.product::before {
+  content: "sale";
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  letter-spacing: 2px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  padding: 7px 15px;
 }
 
 .product-title {
@@ -44,6 +61,39 @@ body {
 .more-info:hover,
 .more-info:active {
   text-decoration: none;
+}
+
+.colors {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.color {
+  width: 22px;
+  height: 22px;
+  background-color: black;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.color-blue {
+  background-color: blue;
+}
+
+.color-red {
+  background-color: red;
+}
+
+.color-pink {
+  background-color: pink;
+}
+
+.color-green {
+  background-color: green;
+}
+
+.color-brown {
+  background-color: brown;
 }
 
 /* PRODUCT DETAILS */
