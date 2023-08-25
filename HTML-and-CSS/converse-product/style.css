@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -40,9 +41,33 @@ body {
   padding: 15px;
 }
 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* collapsed height */
+.product-content {
+  background-color: orchid;
+}
+
+.product-img {
+  float: left;
+  margin-right: 40px;
+}
+
 /* PRODUCT INFORMATION */
+.product-information {
+  float: left;
+  width: 243px;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
 .price {
   font-size: 24px;
+  float: left;
 }
 
 .shipping {
@@ -51,6 +76,13 @@ body {
   font-weight: bold;
   color: #777;
   margin-bottom: 20px;
+  float: right;
+  margin-top: 8px;
+}
+
+.product-description {
+  clear: both;
+  margin-bottom: 10px;
 }
 
 .more-info:link,
@@ -97,11 +129,16 @@ body {
 }
 
 /* PRODUCT DETAILS */
+.product-details {
+  float: left;
+  width: 243px;
+  margin-top: 20px;
+}
+
 .details-title {
   text-transform: uppercase;
   font-size: 16px;
   margin-bottom: 15px;
-  margin-top: 30px;
 }
 
 .details-list {
