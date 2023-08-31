@@ -18,11 +18,11 @@ Default: 1
 
 --- 02 Colors
 - Primary: #e67e22
-- Tints: #fdf2e9 / #fae5d3
-- Shades: #cf711f
+- Tints: #fdf2e9 / #fae5d3 / #eb984e
+- Shades: #cf711f / #45260a
 - Accents: #51cf66 / #94d82d / #ffd43b
 - Greys: 
-#555 / #333 / #888 /
+#555 / #333 / #888 / #aaa
 #6f6f6f(lightest grey allowed on #fdf2e9)
 
 
@@ -32,7 +32,11 @@ Default: 1
 
 --- 05 Shadows
 box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
 box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
+box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 
 
 --- 06 Border-radius
@@ -138,6 +142,7 @@ strong {
   margin-bottom: 1.6rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -150,6 +155,11 @@ strong {
 
   /* Put transition on original "state" */
   transition: all 0.3s;
+
+  /* only necessary for .btn */
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .btn--full:link,
@@ -176,6 +186,18 @@ strong {
   /* border: 3px solid #fff; */
   /* Trick to add border inside */
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
@@ -211,6 +233,13 @@ strong {
 .list-icon {
   font-size: 3rem;
   color: #e67e22;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /* 🦒 Helper/Settings classes 🦒 */
