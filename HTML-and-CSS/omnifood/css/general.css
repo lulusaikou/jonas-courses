@@ -22,9 +22,9 @@ Default: 1
 - Shades: #cf711f / #45260a
 - Accents: #51cf66 / #94d82d / #ffd43b
 - Greys: 
-#555 / #333 / #888 / #aaa
+#555 / #333 / #888 / #aaa / #eee
 #6f6f6f(lightest grey allowed on #fdf2e9)
-
+#767676(lightest grey allowed on #fff)
 
 --- 03 Images
 --- 04 Icons
@@ -100,6 +100,10 @@ strong {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
